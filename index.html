@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Media edukasi digital POS PAUD Pelangi PKG Telukjambe Barat.">
+  <title>E-learning Study Kids</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <audio id="childrenSong" preload="metadata" loop>
+    <source src="assets/bintang-kecil-karaoke.mp3" type="audio/mpeg">
+  </audio>
+  <div class="sky s1">✦</div><div class="sky s2">●</div><div class="sky s3">✦</div>
+
+  <section id="authScreen" class="login-page" aria-labelledby="loginTitle">
+    <div class="login-wrap">
+      <div class="login-card">
+        <div class="login-logo"><img src="assets/logo-pkg-telukjambe-barat.jpeg" alt="Logo PKG Telukjambe Barat"></div>
+        <div class="pill">PKG TELUKJAMBE BARAT</div>
+        <h1 id="loginTitle">Study Kids</h1>
+        <p>Silakan masuk untuk menggunakan media pembelajaran POS PAUD Pelangi.</p>
+        <form id="loginForm" autocomplete="off">
+          <label for="username">Username</label><input id="username" name="username" placeholder="Masukkan username" autocomplete="username" required autofocus>
+          <label for="password">Password</label><input id="password" name="password" type="password" placeholder="Masukkan password" autocomplete="current-password" required>
+          <div id="loginError" class="err login-error" role="alert"></div>
+          <button class="main-btn wide" type="submit">🔐 Masuk</button>
+        </form>
+        <button class="song-toggle login-song-toggle" type="button" data-song-toggle aria-pressed="false">🎵 Putar Lagu Bintang Kecil</button>
+      
+      </div>
+    </div>
+  </section>
+
+  <div id="appShell" class="hidden">
+    <header class="nav">
+      <div class="logo"><img src="assets/logo-pkg-telukjambe-barat.jpeg" alt="Logo PKG"><div><b>Study Kids</b><small>PKG TELUKJAMBE BARAT • POS PAUD Pelangi</small></div></div>
+      <div class="nav-actions"><button class="song-toggle" type="button" data-song-toggle aria-pressed="false">🎵 Putar Lagu</button><span id="userBadge" class="user-badge">👤 Pengguna</span><button id="sound" class="sound" type="button" aria-label="Nyalakan atau matikan suara">🔊</button><button id="logout" class="logout" type="button">Keluar</button></div>
+    </header>
+
+    <main>
+      <section id="home" class="screen">
+        <div class="hero"><div class="hero-copy"><div class="pill">✨ BELAJAR • BERMAIN • BERSENANG-SENANG</div><h1>Ayo Belajar<br><em>Sambil Bermain!</em> 🎈</h1><p>Media edukasi digital yang menyenangkan untuk mengenal huruf, angka, dan bermain sambil belajar.</p><div class="hero-actions"><button class="main-btn" id="start" type="button">Mulai Bermain 🚀</button><button class="ghost-btn" id="scores" type="button">📊 Lihat Nilai</button></div></div><div class="playground" aria-hidden="true"><div class="cloud c1">☁️</div><div class="cloud c2">☁️</div><div class="rainbow">🌈</div><div class="bear">🧸</div><div class="ball">⚽</div><div class="star star1">⭐</div><div class="star star2">⭐</div></div></div>
+        <div class="feature-row"><div>🔤 <b>Huruf A-Z</b><span>Kenali huruf</span></div><div>🔢 <b>Angka 1-10</b><span>Belajar berhitung</span></div><div>🏆 <b>Reward Bintang</b><span>Semangat belajar</span></div></div>
+      </section>
+
+      <section id="name" class="screen hidden"><div class="card name-card"><div class="mascot">🧸</div><h2>Siapa nama kamu?</h2><p>Kenalan dulu sebelum mulai bermain 😊</p><input id="nameInput" maxlength="100" placeholder="Tulis nama kamu..." autocomplete="off"><div id="nameErr" class="err"></div><button class="main-btn wide" id="continue" type="button">Ayo Mulai! 🌟</button></div></section>
+
+      <section id="menu" class="screen hidden"><div class="welcome"><span id="hello">Halo!</span><small>Pilih permainan yang kamu suka hari ini 💕</small></div><div class="games"><button class="game letters" data-game="huruf" type="button"><span class="game-icon">🔤</span><div><b>Dunia Huruf</b><small>Kenali A sampai Z</small></div><strong>▶</strong></button><button class="game numbers" data-game="berhitung" type="button"><span class="game-icon">🔢</span><div><b>Dunia Angka</b><small>Kenali angka 1 sampai 10 dengan suara</small></div><strong>▶</strong></button><button class="game adventure" data-game="petualangan_angka" type="button"><span class="game-icon">🍎⚽</span><div><b>Tambah & Pengurangan</b><small>Hitung buah, bola, dan benda dengan visual</small></div><strong>▶</strong></button><button class="game colors" data-game="warna" type="button"><span class="game-icon">🎨</span><div><b>Mencocokkan Warna</b><small>Seret benda ke warna yang sama</small></div><strong>▶</strong></button><button class="game video" data-game="video" type="button"><span class="game-icon">🧪</span><div><b>Video Eksperimen</b><small>Eksperimen sains seru untuk anak PAUD</small></div><strong>▶</strong></button></div><button class="score-link" id="scores2" type="button">📊 Riwayat Nilai</button></section>
+
+      <section id="game" class="screen hidden"><div class="game-top"><button id="back" class="back" type="button">← Menu</button><div id="title"></div><div id="progress"></div></div><div class="progressbar"><i id="bar"></i></div><div class="card game-card"><div id="content"></div></div></section>
+
+      <section id="video" class="screen hidden"><div class="game-top"><button id="backVideo" class="back" type="button">← Menu</button><h2>🧪 Video Eksperimen</h2></div><div class="video-grid"><article class="video-card"><div class="video-title">🌈 Video Eksperimen Sains</div><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/z8NT0zZtLwE" title="Eksperimen sains sederhana" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p>Video eksperimen sains untuk menumbuhkan rasa ingin tahu dan semangat belajar anak.</p><a class="youtube-btn" target="_blank" rel="noopener noreferrer" href="https://youtu.be/z8NT0zZtLwE">▶ Buka di YouTube</a></article></div></section>
+
+      <section id="score" class="screen hidden"><div class="game-top"><button id="backScore" class="back" type="button">← Menu</button><h2>📊 Nilai Anak</h2></div><div class="card"><div id="scoreContent"></div></div></section>
+    </main>
+    <footer>POS PAUD Pelangi 2026</footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div><div id="confetti" aria-hidden="true"></div>
+  <noscript>Aktifkan JavaScript untuk menggunakan Study Kids.</noscript>
+  <script src="assets/app.js?v=20260923-1"></script>
+</body>
+</html>
