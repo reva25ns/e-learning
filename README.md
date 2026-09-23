@@ -15,9 +15,6 @@ Media pembelajaran POS PAUD Pelangi / PKG Telukjambe Barat yang siap dipublikasi
 - Latihan Angka 1-10 dengan soal pilihan jawaban.
 - Penyimpanan nilai ke Neon PostgreSQL dan riwayat nilai.
 
-## Video YouTube
-- Cara menulis huruf A-Z: https://youtu.be/fj3Xu4mCG_Q?si=IAg3veJV23yAlcw5
-- Angka 1-10: https://www.youtube.com/watch?v=KTIAwAAzFkI
 
 ## Menjalankan lokal
 1. Jalankan `npm install`.
@@ -32,12 +29,3 @@ Tabel `scores` dibuat otomatis saat nilai pertama disimpan. Video membutuhkan ko
 Logo PKG Telukjambe Barat digunakan pada halaman login dan navigasi aplikasi: `assets/logo-pkg-telukjambe-barat.jpeg`.
 
 
-### Pembaruan Dunia Angka dan Tambah & Pengurangan
-Menu angka dipisah menjadi **Dunia Angka** untuk mengenal angka 1-10 dengan audio dan **Tambah & Pengurangan** untuk latihan tambah dan pengurangan.
-
-### Pembaruan Dunia Huruf
-Menu Dunia Huruf A-Z sekarang menampilkan visual objek untuk setiap huruf dan animasi bergeser saat berpindah kartu, seperti GIF sederhana. Contoh A = 🍎 Apel, B = ⚽ Bola, hingga Z = 🦓 Zebra.
-
-
-### Perbaikan login untuk hosting statis
-Jika `/api/login` pada hosting tidak menjalankan fungsi server dan malah mengembalikan `index.html`, versi ini tidak lagi gagal dengan pesan `Unexpected token '<', "<!DOCTYPE"...`. Aplikasi akan otomatis menggunakan **mode offline**: login `admin / admin123` dan nilai disimpan di `localStorage` perangkat. Jika API Vercel + Neon tersedia, aplikasi tetap menggunakan API dan database seperti biasa.
