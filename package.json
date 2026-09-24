@@ -1,0 +1,12 @@
+{
+  "name": "paud-media-edukasi-pro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Media edukasi digital PAUD dengan penyimpanan nilai di Neon",
+  "scripts": {
+    "check": "node --check assets/app.js && node --check api/login.js && node --check api/save_score.js && node --check api/get_scores.js"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.1"
+  }
+}
