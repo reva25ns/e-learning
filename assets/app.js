@@ -343,7 +343,7 @@ function speakColorWarmupSequence(onDone){
  if(!S.sound||!window.speechSynthesis){onDone?.();return}
  prepareIndonesianVoice();
  speechSynthesis.cancel();
- const lines=['Ayo ikuti gerakannya.','Ayo melompat.','Ayo berdiri.','Tangan direntangkan.','Selesai. Level 1.'];
+ const lines=['Ayo ikuti gerakannya.','Ayo melompat.','Ayo berdiri.','Tangan keatas.','Selesai.'];
  let index=0;
  const next=()=>{
   if(index>=lines.length){onDone?.();return}
@@ -368,7 +368,7 @@ function colorWarmup(){
    <div class="warmup-steps">
      <div class="warmup-step"><div class="warmup-icon jump">🦘</div><b>Ayo melompat</b></div>
      <div class="warmup-step"><div class="warmup-icon stand">🧍</div><b>Ayo berdiri</b></div>
-     <div class="warmup-step"><div class="warmup-icon stretch">🙆</div><b>Tangan direntangkan</b></div>
+     <div class="warmup-step"><div class="warmup-icon stretch">🙆</div><b>Tangan keatas</b></div>
      <div class="warmup-step"><div class="warmup-icon done">🎉</div><b>Selesai</b></div>
    </div>
    <div class="warmup-note">🔊 Dengarkan instruksi suara sampai selesai, lalu permainan dimulai.</div>
